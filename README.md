@@ -84,7 +84,7 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 
 ## Contact
 For inquiries, please reach out to:
-- **Email**: [sonetspprt@syncshelf.in](sonetspprt@gmail.com)
+- **Email**: [sonetspprt@syncshelf.in](mailto:sonetspprt@gmail.com)
 - **GitHub**: [Coder Sonet](https://github.com/codersonet)
 
 # Thank You 
