@@ -1,4 +1,4 @@
-# SyncShelf Documentation
+# SyncShelf® Documentation
 
 ## Table of Contents
 1. [Overview](#overview)
