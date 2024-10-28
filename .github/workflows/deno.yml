@@ -1,42 +1,43 @@
-# This workflow uses actions that are not certified by GitHub.
-# They are provided by a third-party and are governed by
-# separate terms of service, privacy policy, and support
-# documentation.
+# SyncShelf Deno CI/CD Workflow
+# This workflow sets up Deno, runs linting, formatting checks, and tests.
+# For more information, see: https://github.com/denoland/setup-deno
 
-# This workflow will install Deno then run `deno lint` and `deno test`.
-# For more information see: https://github.com/denoland/setup-deno
-
-name: Deno
+name: SyncShelf Deno CI
 
 on:
   push:
-    branches: ["main"]
+    branches: ["main"]  # Trigger workflow on pushes to main branch
   pull_request:
-    branches: ["main"]
+    branches: ["main"]  # Trigger workflow on pull requests targeting main branch
 
 permissions:
-  contents: read
+  contents: read  # Permissions required to check out the code
 
 jobs:
   test:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-latest  # Environment for the job
 
     steps:
-      - name: Setup repo
-        uses: actions/checkout@v4
+      - name: Checkout Repository
+        uses: actions/checkout@v4  # Checkout the code from the repository
 
       - name: Setup Deno
-        # uses: denoland/setup-deno@v1
-        uses: denoland/setup-deno@61fe2df320078202e33d7d5ad347e7dcfa0e8f31  # v1.1.2
+        uses: denoland/setup-deno@v1  # Install Deno
         with:
-          deno-version: v1.x
+          deno-version: v1.x  # Use the latest stable version of Deno
 
-      # Uncomment this step to verify the use of 'deno fmt' on each commit.
-      # - name: Verify formatting
-      #   run: deno fmt --check
+      - name: Verify Code Formatting
+        run: deno fmt --check  # Check if the code is properly formatted
 
-      - name: Run linter
-        run: deno lint
+      - name: Run Linter
+        run: deno lint  # Lint the code for potential issues
 
-      - name: Run tests
-        run: deno test -A
+      - name: Run Tests
+        run: deno test -A  # Run all tests with all permissions
+
+      - name: Build Documentation
+        run: deno run --allow-read --allow-write build_docs.ts  # Command to build project documentation, adjust if needed
+
+      - name: Deploy to Staging
+        if: github.ref == 'refs/heads/main'  # Only deploy if the main branch is updated
+        run: deno deploy --prod # Command for deployment, adjust as necessary
