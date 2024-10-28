@@ -5,10 +5,9 @@
 2. [Features](#features)
 3. [Installation](#installation)
 4. [Usage](#usage)
-5. [Project Structure](#project-structure)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Contact](#contact)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Contact](#contact)
 
 ## Overview
 **SyncShelf** is a web-based document management system that allows users to store, edit, and manage their PDF files in a seamless and flexible manner. With features such as user authentication, social login, and last-page tracking, SyncShelf aims to provide an efficient and user-friendly experience for managing documents online.
@@ -77,17 +76,15 @@ Contributions are welcome! To contribute:
    ```bash
    git checkout -b feature/YourFeature
    ```
-3. Make your changes and commit them.
+3. Make your changes and commit them. (do not forget to add comments)
 4. Push to your fork and create a pull request.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](https://) file for more details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/codersonet/SyncShelf/blob/main/LICENSE) file for more details.
 
 ## Contact
 For inquiries, please reach out to:
 - **Email**: [sonetspprt@syncshelf.in](sonetspprt@gmail.com)
 - **GitHub**: [Coder Sonet](https://github.com/codersonet)
 
----
-
-Feel free to customize this documentation according to your project's specific details, and add any additional sections that you think are necessary! If you need help with any specific parts, let me know!
+# Thank You 
